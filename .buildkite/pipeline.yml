@@ -1,6 +1,7 @@
 steps:
   - label: build
     commands:
+      - env
       - make ci-test
     plugins:
       - docker#v3.2.0:
@@ -10,6 +11,7 @@ steps:
           workdir: /go/src/github.com/replicatedhq/kots
           environment:
             - SCOPE_DSN
+            - SCOPE_REFLECTED=$SCOPE_DSN
             - BUILDKITE_REPO
             - BUILDKITE_COMMIT
             - BUILDKITE_BUILD_ID
