@@ -1,21 +1,6 @@
 steps:
-  - label: build
-    commands:
+  - label: "environment dump"
+    command:
       - env
-      - make ci-test
-    plugins:
-      - docker#v3.2.0:
-          image: replicated/gitops-builder:buildkite-go12-node10
-          always-pull: true
-          mount-checkout: true
-          workdir: /go/src/github.com/replicatedhq/kots
-          environment:
-            - SCOPE_DSN
-            - SCOPE_REFLECTED=$SCOPE_DSN
-            - BUILDKITE_REPO
-            - BUILDKITE_COMMIT
-            - BUILDKITE_BUILD_ID
-            - BUILDKITE_BUILD_NUMBER
-            - BUILDKITE_BUILD_URL
-            - BUILDKITE_BUILD_CHECKOUT_PATH
-            - BUILDKITE
+    env:
+      SCOPE_REFLECTED: $SCOPE_DSN
