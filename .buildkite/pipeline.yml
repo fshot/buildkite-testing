@@ -1,6 +1,5 @@
 steps:
   - label: "environment dump"
-    command:
-      - echo $SCOPE_DSN
+    command: echo $SCOPE_DSN
     env:
       SCOPE_REFLECTED: $SCOPE_DSN
