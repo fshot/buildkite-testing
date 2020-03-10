@@ -1,6 +1,6 @@
 steps:
   - label: "environment dump"
-    command: "FSHOT_ENV_TEST=jjj ./test.sh"
+    command: test.sh
       env:
         SCOPE_REFLECTED: $SCOPE_DSN
         FSHOT_ENV_TEST:"qqq"
