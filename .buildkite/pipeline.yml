@@ -3,5 +3,5 @@ steps:
     command: test.sh
     env:
       SCOPE_REFLECTED: $SCOPE_DSN
-      FSHOT_ENV_TEST
+      FSHOT_ENV_TEST: zzz
       
