@@ -4,6 +4,6 @@ env:
 
 steps:
   - label: "environment dump"
-    command: "FSHOT_ENV_TEST=jjj ls -l"
+    command: "FSHOT_ENV_TEST=jjj ./test.sh"
 
       
